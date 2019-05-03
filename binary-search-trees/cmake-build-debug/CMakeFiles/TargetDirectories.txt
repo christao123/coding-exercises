@@ -1,0 +1,3 @@
+C:/Users/Danilo/Desktop/assignment4/assignment20184-danilo-delbusso/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Danilo/Desktop/assignment4/assignment20184-danilo-delbusso/cmake-build-debug/CMakeFiles/assignment20184_danilo_delbusso.dir
+C:/Users/Danilo/Desktop/assignment4/assignment20184-danilo-delbusso/cmake-build-debug/CMakeFiles/edit_cache.dir
