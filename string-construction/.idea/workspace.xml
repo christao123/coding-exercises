@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BuildServerSettings">
+    <option name="LOGIN" value="" />
+    <option name="SERVER_URL" value="http://buildserver" />
+    <option name="REMEMBER_ME" value="true" />
+    <option name="USE_IDEA_PROXY_SETTINGS" value="true" />
+    <option name="INSPECTIONS_BUILD_TYPE_IDS" />
+    <option name="DUPLICATES_BUILD_TYPE_IDS" />
+    <option name="COVERAGE_SETTINGS" />
+    <option name="TEST_STATUS_ENABLED" value="true" />
+    <option name="TEST_STATUS_SHOW_SUCCESSFUL" value="false" />
+    <option name="POSTPONE_SUITABLE_CONFIGURATIONS_SEARCH" value="false" />
+    <option name="ARTIFACTS_BUILD_TYPE_IDS" />
+    <option name="PERFORM_COMMIT_IF_SUCCESSFUL" value="true" />
+    <option name="PERFORM_COMMIT_IF_NO_NEW_FAILED_TESTS" value="false" />
+    <option name="REQUEST_CONFIRMATON" value="false" />
+    <option name="PRE_TESTED_COMMIT" value="true" />
+    <option name="FILTER_BY_STATUS" value="false" />
+    <option name="FILTER_MARKED_AS_FIXED" value="false" />
+    <option name="SHOW_CLOSE_PROMPT" value="true" />
+    <option name="TOOL_WINDOW_SELECTED_CONTENT_INDEX" value="0" />
+    <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="assignment20182_danilo_delbusso" targetName="assignment20182_danilo_delbusso" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f0250cc6-3923-4e4c-99cf-5b2aaa88ff94" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MapOfItems.h" beforeDir="false" afterPath="$PROJECT_DIR$/MapOfItems.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/assignment20182_danilo_delbusso.dir/MapOfItemsTest.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/assignment20182_danilo_delbusso.dir/MapOfItemsTest.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/assignment20182_danilo_delbusso.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/assignment20182_danilo_delbusso.dir/objects.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assignment20182_danilo_delbusso.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/assignment20182_danilo_delbusso.exe" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FUSProjectUsageTrigger">
+    <session id="877353942">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="assignment20182_danilo_delbusso (disassembly)" value="1" />
+          <entry key="cc" value="1" />
+          <entry key="cmake" value="2" />
+          <entry key="cpp" value="1" />
+          <entry key="h" value="10" />
+          <entry key="txt" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CMakeLists.txt" value="3" />
+          <entry key="Disassembly" value="1" />
+          <entry key="ObjectiveC" value="12" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="cpp" value="28" />
+          <entry key="h" value="683" />
+          <entry key="mm" value="14" />
+          <entry key="txt" value="15" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CMakeLists.txt" value="15" />
+          <entry key="ObjectiveC" value="725" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MapOfItemsTest.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="128" selection-start-line="128" selection-end-line="128" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MapOfItems.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="278">
+              <caret line="77" column="32" lean-forward="true" selection-start-line="77" selection-start-column="32" selection-end-line="77" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Item.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="867">
+              <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>allItemsAreOkay</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Item.h" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/MapOfItemsTest.cpp" />
+        <option value="$PROJECT_DIR$/MapOfItems.h" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="85" />
+    <option name="y" value="25" />
+    <option name="width" value="1750" />
+    <option name="height" value="969" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="assignment20182_danilo_delbusso" type="b2602c69:ProjectViewProjectNode" />
+              <item name="assignment20182-danilo-delbusso" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="assignment20182_danilo_delbusso" type="b2602c69:ProjectViewProjectNode" />
+              <item name="assignment20182-danilo-delbusso" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/MapOfItemsTest.cpp" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.assignment20182_danilo_delbusso">
+    <configuration name="MapOfItemsTest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_PATH="$PROJECT_DIR$/MapOfItemsTest.cpp" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="assignment20182_danilo_delbusso" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="assignment20182_danilo_delbusso" TARGET_NAME="assignment20182_danilo_delbusso" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="assignment20182_danilo_delbusso" RUN_TARGET_NAME="assignment20182_danilo_delbusso">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.MapOfItemsTest" />
+      <item itemvalue="Application.assignment20182_danilo_delbusso" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f0250cc6-3923-4e4c-99cf-5b2aaa88ff94" name="Default Changelist" comment="" />
+      <created>1540306165970</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1540306165970</updated>
+      <workItem from="1540306169579" duration="115000" />
+      <workItem from="1540307045464" duration="6714000" />
+      <workItem from="1540314075758" duration="1122000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="7951000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37527114" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4295011" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TeamCity" order="8" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.43926248" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="CMake" order="13" weight="0.329718" />
+      <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.3253796" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="LuaJ" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.37527114" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4295011" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TeamCity" order="8" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.43926248" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="CMake" order="13" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.3253796" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="LuaJ" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/MapOfItems.h</url>
+          <line>94</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="v" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>walkspeed==2.5</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/u.cc" />
+    <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/alloc_traits.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="441" selection-start-line="441" selection-end-line="441" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/allocator.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="138" selection-start-line="138" selection-end-line="138" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/ext/new_allocator.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_construct.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="127" selection-start-line="127" selection-end-line="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_vector.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="780" selection-start-line="780" selection-end-line="780" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Item.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="48" lean-forward="true" selection-start-column="48" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MapOfItemsTest.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="128" selection-start-line="128" selection-end-line="128" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MapOfItems.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="77" column="32" lean-forward="true" selection-start-line="77" selection-start-column="32" selection-end-line="77" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
