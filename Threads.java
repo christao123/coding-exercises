@@ -1,5 +1,11 @@
 /**
  * Examples on use of threads in Java
+ Thread has a method start() which tells the JVM to create a new
+thread and then call the run() method in that new thread;
+    – Do not call run() directly: otherwise the creating a new thread part is missed
+out and the run() method runs just as any other method.
+    – Slight Detour: similarly never call paint() always call repaint(): repaint
+starts a new thread then calls paint().
  */
 public class Threads {
 
@@ -11,15 +17,21 @@ public class Threads {
         Thread p = new PrintP(); //with extends Thread
         Thread q = new Thread(new PrintQ()); //with Runnable
 
+        System.out.println("-------------JOIN---------------");
         p.start();
         q.start();
+        try{
+            q.join();  //we are asking the cpu to finish q before everything else (P and R in this case)
+        } catch (InterruptedException e){
+            e.printStackTrace();
+        }
 
-        //start a new thread with main
         for(int i = 0; i < 200; ++i){
             System.out.print("R");
         }
     }
 
+        
     /**
      * Create Thread that prints P by extending Thread
      */
@@ -29,6 +41,12 @@ public class Threads {
         public void run() {
             for (int i = 0; i< 100; ++i){
                 System.out.print("P");
+                try{
+                    Thread.sleep(3);
+                } catch (InterruptedException e){
+                    e.printStackTrace();
+                }
+
             }
         }
     }
