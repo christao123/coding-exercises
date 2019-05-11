@@ -16,7 +16,7 @@ public class ProcessBuilding {
         commands.add(">");
         commands.add("test.log");
         executeWithWaitFor(commands);
-        //?? doesn't work
+        //? doesn't work
 
         commands.clear();
 
