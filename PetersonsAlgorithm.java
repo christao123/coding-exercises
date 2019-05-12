@@ -11,7 +11,6 @@ public class PetersonAlgorithm{
         p1.start();
         p2.start();
     }
-
 }
 
 public class Producer extends Thread{
@@ -22,7 +21,7 @@ public class Producer extends Thread{
         this.value = value;
     }
     public void run(){
-        for(int i = 0; i < 5; ++i){ //chaotic good
+        for(int i = 0; i < 5; ++i){
             buffer.assign(i, value);
             buffer.print();
             System.out.println("");
@@ -30,8 +29,7 @@ public class Producer extends Thread{
     }
 }
 
-
-public  class Buffer {
+public class Buffer {
     AtomicInt[] buffer;
     int size;
     public Buffer(int size){
@@ -54,7 +52,6 @@ public  class Buffer {
         }
         System.out.print(buffer[size-1].get());
         System.out.print("]");
-
     }
 }
 public  class AtomicInt{
