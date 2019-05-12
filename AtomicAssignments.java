@@ -1,49 +1,40 @@
 /**
-* Simulate atomic assignments.
-* Should always print:
-* 42
-* true
-* in the given order
+* Simulate atomic assignments and the implementation of Peterson's algorithm using a buffer
 */
-public class AtomicAssignments{
+public class PetersonAlgorithm{
+
     public static void main(String[] args){
-        AtomicInt ai = new AtomicInt(1);
-        AtomicBoolean ab = new AtomicBoolean(false);
-
-        ai.start();
-        ab.start();
+        Buffer buffer = new Buffer(10);
     }
-    public static class AtomicInt extends Thread{
-        int value;
+    public static class Buffer {
+        AtomicInt[] buffer;
 
-        @Override
-        public void run(){
-            assign(42);
+        public Buffer(size){
+            buffer = AtomicInt[size];
         }
 
+        public void assign(index, value){
+            buffer[i].assign(value);
+        }
+    }
+    public static class AtomicInt{
+        int value;
+        
         public AtomicInt(int initialValue){
             value = initialValue;
         }
-
         public synchronized void assign(int newValue){
             value = newValue;
-            System.out.println(value);
         }
     }
-    public static class AtomicBoolean extends Thread{
+    public static class AtomicBoolean{
         Boolean value;
-
-        @Override
-        public void run(){
-            assign(true);
-        }
-
+        
         public AtomicBoolean(Boolean b){
             value = b;
         }
         public synchronized void assign(Boolean newBool){
             value = newBool;
-            System.out.println(value);
         }
     }
 }
