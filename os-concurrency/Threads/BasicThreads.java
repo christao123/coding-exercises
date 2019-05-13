@@ -1,4 +1,4 @@
-
+package Threads;
 /**
  * Examples on use of threads in Java
  Thread has a method start() which tells the JVM to create a new
