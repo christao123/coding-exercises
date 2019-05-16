@@ -74,7 +74,6 @@ class HowToSort
     }
 };
 
-// TODO your code goes here:
 
 HowToSort nearlySorted(const vector<int> & originalVector)
 {
@@ -155,6 +154,3 @@ HowToSort nearlySorted(const vector<int> & originalVector)
     return HowToSort(0, 0, true); //if the vector is sorted
 }
 
-// Don't write any code below this line
-
-#endif

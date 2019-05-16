@@ -10,7 +10,6 @@ using std::atan;
 using std::ostream;
 
 
-// TODO: your code  goes here
 
 class Item{
 
@@ -77,9 +76,4 @@ ostream & operator<<(ostream & o, const Item & item){
 
 
 
-
-
-// don't write any code below this line
-
-#endif
 

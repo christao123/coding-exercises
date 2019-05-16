@@ -85,9 +85,7 @@ int main() {
                 cout << "Failed: When filling the board, setSquare() returned false\n";
                 return 1;
             }
-        //    cout << "Trying to solve hard board:\n";
-           // board->write(cout);
-
+   
             BestFirstSearch search(std::move(board));
 
             Searchable *solution = search.solve();
@@ -96,8 +94,7 @@ int main() {
 
             totTimes += (float) timeParsing / CLOCKS_PER_SEC;
             counter++;
-          //  cout << "time: " << ((float) timeParsing / CLOCKS_PER_SEC) << "s" << endl;
-
+    
 
             if (solution == nullptr) {
                 cout << "\nFailed: Couldn't be solved\n";
@@ -105,17 +102,6 @@ int main() {
             }
 
             Sudoku *solvedBoard = static_cast<Sudoku *>(solution);
-
-
-           /* if (checkAnswer(solvedBoard, answer)) {
-                cout << "\nPassed: Solution was:\n";
-                solvedBoard->write(cout);
-                cout << "\nNodes expanded: " << search.getNodesExpanded() << std::endl;
-                return 0;
-            } else {
-                cout << "Failed: Solution was returned, but it was the wrong answer\n";
-                return 1;
-            }*/
         }
     }
 

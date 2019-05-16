@@ -14,10 +14,6 @@ using std::endl;
 using std::set;
 using std::sqrt;
 
-// TODO: Your Sudoku class goes here:
-
-
-
 class Sudoku : public Searchable {
 
 private:
@@ -246,5 +242,3 @@ public:
 
 
     };
-
-#endif

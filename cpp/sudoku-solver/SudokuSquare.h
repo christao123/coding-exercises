@@ -1,7 +1,6 @@
 #ifndef SUDOKUSQUARE_H
 #define SUDOKUSQUARE_H
 
-// Do not add any #include statements to this file
 
 class iterator {
 private:
@@ -17,13 +16,13 @@ public:
 
         int tempIndexCurrent = currentDigit;
 
-        number = number >> (currentDigit + 1);  //rightshift until the number represents the next value
+        number = number >> (currentDigit + 1);  
         bool found = false;
 
-        while (!found && currentDigit < 26) {  // todo: remove 33 with actual size?
+        while (!found && currentDigit < 26) {  
             (number & 1) == 1 ? found = true :
 
-                number = number >> 1;
+             number = number >> 1;
 
 
             ++currentDigit;
@@ -54,7 +53,6 @@ public:
 
 class SudokuSquareSet {
 
-    // TODO: write your code here
 private:
     unsigned int set;
     int elements;
@@ -162,10 +160,6 @@ public:
 };
 
 
-
-// Do not write any code below this line
 static_assert(sizeof(SudokuSquareSet) == sizeof(unsigned int) + sizeof(int),
               "The SudokuSquareSet class needs to have exactly two 'int' member variables, and no others");
 
-
-#endif

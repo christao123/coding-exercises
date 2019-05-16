@@ -9,7 +9,6 @@ using std::cout;
 using std::endl;
 using std::vector;
 
-// TODO: your code goes here
 
 class MapOfItems
 {
@@ -104,6 +103,3 @@ public:
     }
 };
 
-// don't write any code below this line
-
-#endif

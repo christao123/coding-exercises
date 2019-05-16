@@ -8,7 +8,6 @@ using std::endl;
 using std::size_t;
 using std::string;
 
-// TODO: your code goes here:
 
 int stringConstruction(const string &target, const int &appendCost, const int &cloneCost)
 {
@@ -108,31 +107,3 @@ LOOP:
     return totalCost;
 }
 
-// do not write or edit anything below this line
-
-#endif
-
-               /* string substrToFind = s.substr(j + allowedSkips, 1);
-                if (substrToFind.find("?") == string::npos)
-                {
-
-                    int i = 1;
-                    cout << "-----statuses------" << endl;
-                    cout << "j: " << j << endl;
-                    cout << "allowed skips: " << allowedSkips << endl;
-                    cout << "substrtofind: " << substrToFind << endl;
-                    cout << "prefix: " << prefix << endl;
-                    cout << "------------------" << endl;
-                    while (i < s.length() - j - allowedSkips && prefix.find(substrToFind) != string::npos)
-                    {
-
-                        i++;
-                        substrToFind = target.substr(j + allowedSkips, i);
-                    }
-
-                    if (tempi < i && appendCost * i > cloneCost)
-                    {
-                        tempi = i;
-                        skipsNeeded = allowedSkips;
-                    }
-                }*/

@@ -8,7 +8,6 @@ using std::endl;
 using std::size_t;
 using std::string;
 
-// TODO: your code goes here:
 
 int stringConstruction(const string &target, const int &appendCost, const int &cloneCost)
 {
@@ -85,6 +84,3 @@ LOOP:
     return totalCost;
 }
 
-// do not write or edit anything below this line
-
-#endif

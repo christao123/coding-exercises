@@ -8,9 +8,6 @@
 using std::cout;
 using std::string;
 using std::vector;
-
-// TODO: Your code goes here
-
 class Stack{
     protected:
     vector<double> v;
@@ -61,7 +58,3 @@ const double evaluate(const string & expression){
     }
     return s.pop();
 }
-
-// Do not write anything below this line
-
-#endif

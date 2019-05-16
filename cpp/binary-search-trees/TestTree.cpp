@@ -89,8 +89,6 @@ int main() {
 
     
     {
-        
-        // compiler errors here mean you tried to do something other than 'operator<' when comparing data in the tree
         BinarySearchTree<JustAnInt> tree;
         tree.insert(JustAnInt{42});
     }

@@ -1,7 +1,5 @@
 #ifndef ITEM_H
 #define ITEM_H
-
-// TODO: copy your Item.h file from assignment 1 over this file
 #include <ostream>
 #include <iostream>
 #include <string>
@@ -11,7 +9,6 @@ using std::atan;
 using std::ostream;
 
 
-// TODO: your code  goes here
 
 class Item{
 
@@ -76,7 +73,4 @@ ostream & operator<<(ostream & o, const Item & item){
 }
 
 
-
-
-#endif
 

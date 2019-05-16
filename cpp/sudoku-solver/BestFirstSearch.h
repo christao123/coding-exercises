@@ -28,7 +28,6 @@ protected:
 public:
 
     BestFirstSearch(std::unique_ptr<Searchable> && startFrom) {
-        // TODO Put startFrom onto the queue:
         queue.push(std::move(startFrom));
         
     }
@@ -63,8 +62,3 @@ public:
 
 
 };
-
-
-// Do not edit below this line
-
-#endif

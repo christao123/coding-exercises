@@ -11,8 +11,6 @@ class KeyValuePair
     const Key k;
     Value v;
 
-    // TODO your code for KeyValuePair goes here
-
     KeyValuePair(Key k, Value v) : k(k), v(v) {}
 
     KeyValuePair(Key k) : k(k) {}
@@ -48,8 +46,6 @@ class TreeMap
         tree.write(o);
     }
 
-    // TODO your code for TreeMap goes here:
-
     KeyValuePair<Key, Value> * find(Key key){
         KeyValuePair<Key, Value> kvp(key);
         auto element = tree.find(kvp);
@@ -61,7 +57,3 @@ class TreeMap
     }
 
 };
-
-// do not edit below this line
-
-#endif

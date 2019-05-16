@@ -13,7 +13,6 @@ using std::unique_ptr;
 #include <utility>
 using std::pair;
 
-// TODO your code for the TreeNode class goes here:
 template <typename T>
 class TreeNode
 {
@@ -162,6 +161,3 @@ public:
 };
 
 
-// do not edit below this line
-
-#endif

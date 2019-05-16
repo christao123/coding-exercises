@@ -6,10 +6,6 @@ using std::cerr;
 using std::cout;
 using std::endl;
 
-// Do not add any #include statements here.  If you have a convincing need for adding a different `#include` please post in the forum on KEATS.
-
-// TODO your code for the Node class goes here:
-// (Note the 'NodeIterator' class will report lots of errors until Node exists
 template <typename E>
 class Node
 {
@@ -67,9 +63,5 @@ class NodeIterator
         return current->data;
     }
 
-    // TODO: complete the code for NodeIterator here
 };
 
-// do not edit below this line
-
-#endif

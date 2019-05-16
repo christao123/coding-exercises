@@ -1,17 +1,9 @@
 #ifndef SIMPLEVECTOR_H
 #define SIMPLEVECTOR_H
 
-
-// NB Do not change this given code -- all your work for this part of the assignment should be in CircularBuffer.h
-
-/** @brief A simple vector class
- * 
- * This is a stripped-down version of the vector class.
- * 
- * - You can construct it to have a fixed size
- * - You can call size() to find what that size is
- * - You can access elements using []
- */
+/**
+ * @author Andrew Coles
+*/
 template<class T>
 class SimpleVector {
 private:

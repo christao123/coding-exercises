@@ -7,7 +7,6 @@
 using std::cout;
 using std::endl;
 
-// TODO your code goes here:
 
 template <typename T>
 class BinarySearchTree
@@ -326,7 +325,3 @@ public:
         return nullptr;
     }
 };
-
-// do not edit below this line
-
-#endif
