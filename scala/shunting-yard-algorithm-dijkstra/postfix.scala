@@ -1,40 +1,16 @@
-// Shunting Yard Algorithm
-// by Edsger Dijkstra
-// ========================
 
-
-// type of tokens
 type Toks = List[String]
 
-// the operations in the basic version of the algorithm
 val ops = List("+", "-", "*", "/")
 
-// the precedences of the operators
 val precs = Map("+" -> 1,
 		"-" -> 1,
 		"*" -> 2,
 		"/" -> 2)
 
-// helper function for splitting strings into tokens
 def split(s: String) : Toks = s.split(" ").toList
 
 
-// (6) Implement below the shunting yard algorithm. The most
-// convenient way to this in Scala is to implement a recursive 
-// function and to heavily use pattern matching. The function syard 
-// takes some input tokens as first argument. The second and third 
-// arguments represent the stack and the output of the shunting yard 
-// algorithm.
-//
-// In the marking, you can assume the function is called only with 
-// an empty stack and an empty output list. You can also assume the
-// input os  only properly formatted (infix) arithmetic expressions
-// (all parentheses will be well-nested, the input only contains 
-// operators and numbers).
-
-// You can implement any additional helper function you need. I found 
-// it helpful to implement two auxiliary functions for the pattern matching:  
-// 
  def is_op(op: String) : Boolean = List("+", "-", "*", "/").contains(op)
  def prec(op1: String, op2: String) : Boolean = {
 	val precs = Map("+" -> 1,
@@ -115,12 +91,6 @@ def split(s: String) : Toks = s.split(" ").toList
 //syard(split("( ( ( 3 ) ) + ( ( 4 + ( 5 ) ) ) )")) // 3 4 5 + +
 
  
-// (7) Implement a compute function that evaluates an input list
-// in postfix notation. This function takes a list of tokens
-// and a stack as argumenta. The function should produce the 
-// result as an integer using the stack. You can assume 
-// this function will be only called with proper postfix 
-// expressions.    
 
 
 def calculate(n1 : Int, n2 : Int, op : String) : Int = op match {

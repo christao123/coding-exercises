@@ -1,18 +1,8 @@
-// Part 2 about a "Compiler" for the Brainf*** language
-//======================================================
-// Part 1 about an Interpreter for the Brainf*** language
-//========================================================
 
 
-// representation of Bf memory 
 
 type Mem = Map[Int, Int]
 
-
-// (1) Write a function that takes a file name as argument and
-// and requests the corresponding file from disk. It Returns the
-// content of the file as a String. If the file does not exists,
-// the function should Return the empty string.
 
 import io.Source
 import scala.util._
@@ -21,29 +11,11 @@ def load_bff(name: String) : String ={
       Try(Source.fromFile(name).mkString).getOrElse("")
 }
 
-// (2) Complete the functions for safely reading  
-// and writing brainf*** memory. Safely read should
-// Return the value stored in the Map for a given memory
-// pointer, provided it exists; otherwise it Returns 0. The
-// writing function generates a new Map with the
-// same data, except at the given memory pointer the
-// value v is stored.
-
 
 def sread(mem: Mem, mp: Int) : Int =  mem.getOrElse(mp, 0)
 
 def write(mem: Mem, mp: Int, v: Int) : Mem = mem + (mp -> v)
-//
-//write(Map(), 1, 2) == Map(1 -> 2)
-//write(Map(1 -> 0), 1, 2) == Map(1 -> 2)
-//
 
-// (3) Implement the two jumping instructions in the 
-// brainf*** language. In jumpRight, given a program and 
-// a program counter move the program counter to the right 
-// until after the *matching* ]-command. Similarly, 
-// jumpLeft implements the move to the left to just after
-// the *matching* [-command.
 
 def jumpRight(prog: String, pc: Int, level: Int) : Int = {
 if(pc+1 < prog.length){
@@ -81,21 +53,6 @@ def jumpLeft(prog: String, pc: Int, level: Int) : Int = {
 
 
 
-// (4) Complete the compute function that interprets (runs) a brainf***
-// program: the arguments are a program (represented as a string), a program 
-// counter, a memory counter and a brainf*** memory. It Returns the
-// memory at the stage when the execution of the brainf*** program
-// finishes. The interpretation finishes once the program counter
-// pc is pointing to something outside the program string.
-// If the pc points to a character inside the program, the pc, 
-// memory pointer and memory need to be updated according to 
-// rules of the brainf*** language. Then, recursively, the compute 
-// function continues with the command at the new program
-// counter. 
-//
-// Implement the run function that calls compute with the program
-// counter and memory counter set to 0.
-
 
 def compute(prog: String, pc: Int, mp: Int, mem: Mem) : Mem = {
 if(pc == prog.length || pc == -1)
@@ -125,9 +82,6 @@ prog(pc) match{
 
 def run(prog: String, m: Mem = Map()) = compute(prog, 0, 0, m)
 
-// If you need any auxiliary function, feel free to 
-// implement it, but do not make any changes to the
-// templates below.
 
 def time_needed[T](n: Int, code: => T) = {
   val start = System.nanoTime()
@@ -136,47 +90,6 @@ def time_needed[T](n: Int, code: => T) = {
   (end - start)/(n * 1.0e9)
 }
 
-// DEBUGGING INFORMATION!!!
-//
-// Compiler, even real ones, are fiendishly difficult to get
-// to produce correct code. The point is that for example for
-// the Sierpinski program, they need to still generate code
-// that displays such a triangle. If yes, then one usually
-// can take comfort that all is well. If not, then something
-// went wrong during the optimisations.
-
-
-// ADVANCED TASKS
-//================
-
-// (5) Write a function jtable that precomputes the "jump
-//     table" for a bf-program. This function takes a bf-program 
-//     as an argument and Returns a Map[Int, Int]. The 
-//     purpose of this map is to record the information
-//     that given on the position pc is a '[' or a ']',
-//     then to which pc-position do we need to jump next?
-// 
-//     For example for the program
-//    
-//       "+++++[->++++++++++<]>--<+++[->>++++++++++<<]>>++<<----------[+>.>.<+<]"
-//
-//     we obtain the map
-//
-//       Map(69 -> 61, 5 -> 20, 60 -> 70, 27 -> 44, 43 -> 28, 19 -> 6)
-//  
-//     This states that for the '[' on position 5, we need to
-//     jump to position 20, which is just after the corresponding ']'.
-//     Similarly, for the ']' on position 19, we need to jump to
-//     position 6, which is just after the '[' on position 5, and so
-//     on. The idea is to not calculate this information each time
-//     we hit a bracket, but just look up this information in the 
-//     jtable. You can use the jumpLeft and jumpRight functions
-//     from Part 1 for calculating the jtable.
-//
-//     Then adapt the compute and run functions from Part 1 in order 
-//     to take advantage of the information stored in the jtable. 
-//     This means whenever jumpLeft and jumpRight was called previously,
-//     you should look up the jump address in the jtable.
  
 def jtable(pg: String) : Map[Int, Int] = 
       (0 until pg.length).collect { index => pg(index) match {
@@ -212,19 +125,6 @@ prog(pc) match{
 
 def run2(prog: String, m: Mem = Map()) = compute2(prog, jtable(prog), 0, 0, m)
 
-// (6) Write a function optimise which deletes "dead code" (everything
-// that is not a bf-command) and also replaces substrings of the form
-// [-] by a new command 0. The idea is that the loop [-] just resets the
-// memory at the current location to 0. In the compute3 and run3 functions
-// below you implement this command by writing the number 0 to mem(mp), 
-// that is write(mem, mp, 0). 
-//
-// The easiest way to modify a string in this way is to use the regular
-// expression """[^<>+-.,\[\]]""", which recognises everything that is 
-// not a bf-command and replace it by the empty string. Similarly the
-// regular expression """\[-\]""" finds all occurrences of [-] and 
-// by using the Scala method .replaceAll you can replace it with the 
-// string "0" standing for the new bf-command.
 
 def optimise(s: String) : String = s.replaceAll("""[^<>+-.,\[\]]""", "").replaceAll("""\[-\]""", "0")
 
@@ -259,26 +159,6 @@ def run3(pg: String, m: Mem = Map()) = {
       compute3(newpg, jtable(newpg), 0, 0, m)
 }
 
-// (7)  Write a function combine which replaces sequences
-// of repeated increment and decrement commands by appropriate
-// two-character commands. For example for sequences of +
-//
-//              orig bf-cmds  | replacement
-//            ------------------------------
-//              +             | +A 
-//              ++            | +B
-//              +++           | +C
-//                            |
-//              ...           |
-//                            | 
-//              +++....+++    | +Z
-//                (where length = 26)
-//
-//  Similar for the bf-command -, > and <. All other commands should
-//  be unaffected by this change.
-//
-//  Adapt the compute4 and run4 functions such that they can deal
-//  appropriately with such two-character commands.
 
 def modify_sequence(prog : String, start_seq : Int, end_seq: Int, char_to_find : Char) : (String, Int) = {
      if(end_seq-start_seq == 25){

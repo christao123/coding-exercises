@@ -1,6 +1,3 @@
-// Shunting Yard Algorithm 
-// including Associativity for Operators 
-// =====================================
 
 // type of tokens
 type Toks = List[String]
@@ -41,15 +38,6 @@ val precs = Map("+" -> 1,
 
 // the operations in the basic version of the algorithm
 val ops = List("+", "-", "*", "/", "^")
-
-
-
-// (8) Implement the extended version of the shunting yard algorithm.
-// This version should properly account for the fact that the power 
-// operation is right-associative. Apart from the extension to include
-// the power operation, you can make the same assumptions as in 
-// basic version.
-
 
  def precpow(op1: String, op2: String) : Boolean = {
 	val precs = Map("+" -> 1,
@@ -113,9 +101,6 @@ val ops = List("+", "-", "*", "/", "^")
 // test cases
 //syard(split("3 + 4 * 8 / ( 5 - 1 ) ^ 2 ^ 3"))  // 3 4 8 * 5 1 - 2 3 ^ ^ / +
 
-
-// (9) Implement a compute function that produces a Long(!) for an
-// input list of tokens in postfix notation.
 
 
 def calculate(n1 : Long, n2 : Long, op : String) : Long = op match {

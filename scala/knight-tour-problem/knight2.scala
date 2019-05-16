@@ -1,22 +1,9 @@
 import scala.annotation.tailrec;
-// Part 2 about finding a single tour for a board using the Warnsdorf Rule
-//=========================================================================
-
-// Part 1 about finding Knight's tours
-//=====================================
-
-// If you need any auxiliary function, feel free to 
-// implement it, but do not make any changes to the
-// templates below. Also have a look whether the functions
-// at the end are of any help.
-
 
 
 type Pos = (Int, Int)    // a position on a chessboard
 type Path = List[Pos]    // a path...a list of positions
 
-//(1) Complete the function that tests whether the position x
-//    is inside the board and not yet element in the path.
 
 def is_legal(dim: Int, path: Path, x: Pos) : Boolean = {
     if(x._1 >= 0 && x._1 < dim && x._2 >= 0 && x._2 < dim
@@ -28,10 +15,6 @@ def is_legal(dim: Int, path: Path, x: Pos) : Boolean = {
       false
     }
 }
-
-//(2) Complete the function that calculates for a position x
-//    all legal onward moves that are not already in the path.
-//    The moves should be ordered in a "clockwise" manner.
 
 def get_possible_translations() : List[Pos] = {
   List(
@@ -61,10 +44,6 @@ get_possible_translations.map( traslation =>(
 }
 
 
-//(3) Complete the two recursive functions below.
-//    They exhaustively search for knight's tours starting from the
-//    given path. The first function counts all possible tours,
-//    and the second collects all tours in a list of paths.
   def count_tours(dim: Int, path: Path) : Int = {
   
     if(path == Nil)
@@ -112,10 +91,6 @@ if(path == Nil)
 }
 
 
-//(4) Implement a first-function that finds the first 
-//    element, say x, in the list xs where f is not None. 
-//    In that case Return f(x), otherwise None. If possible,
-//    calculate f(x) only once.
 @tailrec
 def first(xs: List[Pos], f: Pos => Option[Path]) : Option[Path] = {
     if(xs == Nil){
@@ -133,18 +108,6 @@ def first(xs: List[Pos], f: Pos => Option[Path]) : Option[Path] = {
 }
 
 
-// test cases
-//def foo(x: (Int, Int)) = if (x._1 > 3) Some(List(x)) else None
-//
-//first(List((1, 0),(2, 0),(3, 0),(4, 0)), foo)   // Some(List((4,0)))
-//first(List((1, 0),(2, 0),(3, 0)), foo)          // None
-
-
-
-
-//(5) Implement a function that uses the first-function from (4) for
-//    trying out onward moves, and searches recursively for a
-//    knight tour on a dim * dim-board.
 
 
 def first_tour(dim: Int, path: Path) : Option[Path] = {
@@ -161,10 +124,6 @@ def first_tour(dim: Int, path: Path) : Option[Path] = {
 }
 
 
-//(6) Complete the function that calculates a list of onward
-//    moves like in (2) but orders them according to Warnsdorf’s 
-//    rule. That means moves with the fewest legal onward moves 
-//    should come first.
 
 
 def ordered_moves(dim: Int, path: Path, x: Pos) : List[Pos] = {
@@ -174,9 +133,6 @@ def ordered_moves(dim: Int, path: Path, x: Pos) : List[Pos] = {
 }
 
 
-//(7) Complete the function that searches for a single *closed* 
-//    tour using the ordered_moves function from (6). This
-//    function will be tested on a 6 x 6 board. 
 
 def is_in_range_of_origin(x: Pos, o: Pos, dim: Int) : Boolean = {
   legal_moves(dim, Nil, o).contains(x)
@@ -203,13 +159,6 @@ def first_closed_tour_heuristic(dim: Int, path: Path) : Option[Path] = {
       })
 }
 
-
-//(8) Same as (7) but searches for *non-closed* tours. This 
-//    version of the function will be called with dimensions of 
-//    up to 30 * 30.
-
-
-
 def first_tour_heuristic(dim: Int, path: Path) : Option[Path] = { 
     if(path.length == dim*dim){
         Some(path)
@@ -220,7 +169,7 @@ def first_tour_heuristic(dim: Int, path: Path) : Option[Path] = {
 }
 
 
-/*
+
 def time_needed[T](code: => T) : T = {
  val start = System.nanoTime()
   val result = code
@@ -238,4 +187,3 @@ def time_needed[T](code: => T) : T = {
     println
   } 
 }
-*/
