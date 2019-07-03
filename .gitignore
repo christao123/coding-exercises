@@ -473,3 +473,4 @@ healthchecksdb
 MigrationBackup/
 
 # End of https://www.gitignore.io/api/csharp,aspnetcore
+/csharp/EmailSendingApp/App_Data/new_file.txt
