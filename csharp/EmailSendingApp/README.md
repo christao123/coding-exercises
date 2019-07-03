@@ -24,9 +24,6 @@
 	* Have a button which states "Send"
 	when the button is clicked, send a mail to Andy and Robbie with the subject "File created in C#", text to say "Hello Adrian, Andy and Robbie, here is the text file. Regards (Name)" and the file attached.
 
-
-
-## Best looking wins a coffee/tea/cold drink/chocolate bar/crisps/fruit
 	
 ## Enhancements: 
 * Read emails from a config file (removes hard code)
