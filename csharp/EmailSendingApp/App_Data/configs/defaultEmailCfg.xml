@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+<EmailConfiguration>
+    <FromAddress>bestlookingproject@gmail.com</FromAddress>
+        <SMTPServerAddress>smtp.gmail.com</SMTPServerAddress>
+        <Port>587</Port>
+        <Credentials>
+            <Username>bestlookingproject@gmail.com</Username>
+            <Password>immawinthatcoffee</Password>
+            <EnableSsl>True</EnableSsl>
+        </Credentials>
+</EmailConfiguration>

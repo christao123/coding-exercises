@@ -105,6 +105,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\configs\defaultEmailCfg.xml" />
     <Content Include="App_Data\images\logo.PNG" />
     <Content Include="App_Data\file.txt" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -162,6 +163,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="CustomUtils\EmailSenderConfiguration.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -169,7 +171,8 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="FileManager.cs" />
+    <Compile Include="CustomUtils\EmailSender.cs" />
+    <Compile Include="CustomUtils\FileManager.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
