@@ -20,10 +20,6 @@ Have a label "Email Andy + Robbie + Adrian"
 Have a button which states "Send"
 	when the button is clicked, send a mail to Andy and Robbie with the subject "File created in C#", text to say "Hello Adrian, Andy and Robbie, here is the text file. Regards (Name)" and the file attached.
 
-notes:	Robbie's email: Robbie.Lambert@BMWGroup.com
-	Andy's email: Andreas.M.Geier@bmwgroup.com
-	Adrian's email: Adrian.Radulescu@BMWGroup.com
-
 	Remember error handling
 
 	Best looking wins a coffee/tea/cold drink/chocolate bar/crisps/fruit
