@@ -40,13 +40,40 @@ namespace WebApplication_ {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl EmailForm;
         
         /// <summary>
-        /// FromAddressDropDownList control.
+        /// FromAddressCheckBoxList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList FromAddressDropDownList;
+        protected global::System.Web.UI.WebControls.CheckBoxList FromAddressCheckBoxList;
+        
+        /// <summary>
+        /// AddImageButtonDiv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl AddImageButtonDiv;
+        
+        /// <summary>
+        /// AddEmailTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox AddEmailTextBox;
+        
+        /// <summary>
+        /// AddEmailImageButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton AddEmailImageButton;
         
         /// <summary>
         /// SubjectTextBox control.

@@ -109,6 +109,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\configs\defaultEmailCfg.xml" />
+    <Content Include="Images\correct.png" />
+    <Content Include="Images\email-add-bw.png" />
+    <Content Include="Images\email-add-colored.png" />
+    <Content Include="Images\email-add-no-border-colored.png" />
+    <Content Include="Images\email-add.png" />
     <Content Include="Images\logo-banner.png" />
     <Content Include="Images\logo-circle.png" />
     <Content Include="App_Data\file.txt" />
@@ -130,6 +135,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Images\sign-add-icon.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />

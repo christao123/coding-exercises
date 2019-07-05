@@ -19,16 +19,19 @@ namespace WebApplication_
         private readonly string _rootPath = HttpContext.Current.Server.MapPath("~");
         private EmailSender emailSender;
         private readonly string _attachmentsPath = "/App_Data/Attachments/";
+        private bool addingEmailAddress = false;
 
         protected void Page_Load(object sender, EventArgs e)
         {
 
             EmailForm.Visible = false;
+            // AddEmailTextBox.Visible = false;
+            //addingEmailAddress = false;
 
             //todo: check if this stuff goes here or not
             Page.Title = "Dan's ";
             string t = new FileManager().ReadFromFile(_rootPath + "/App_Data/file.txt");
-            
+
 
             string bigString = "Imma Win That Coffee\n";
             for (int i = 0; i < 10; i++)
@@ -36,9 +39,6 @@ namespace WebApplication_
                 bigString += bigString;
             }
 
-            new FileManager().WriteToFile(
-                _rootPath + "/App_Data/new_file.txt",
-                bigString);
 
             emailSender = new EmailSender(_rootPath + "App_Data/configs/defaultEmailCfg.xml");
         }
@@ -51,57 +51,66 @@ namespace WebApplication_
 
         protected void SendEmail_click(object sender, EventArgs e)
         {
-            string toAddress = FromAddressDropDownList.SelectedItem.Text;
+            ListItemCollection toAddresses = FromAddressCheckBoxList.Items;
             string subject = SubjectTextBox.Text;
             string body = MessageTextBox.Text;
 
+
             IList<HttpPostedFile> postedFiles = FileUpload.PostedFiles;
-            
+
 
             ArrayList attachments = GenerateAttachments(postedFiles);
 
+
+            //add hardcoded custom attachment
+            new FileManager().WriteToFile(
+                _rootPath + "/App_Data/new_file.txt",
+                body);
+
+            Attachment customFile = new Attachment(_rootPath + "/App_Data/new_file.txt");
+            customFile.Name = "new_file.txt";
+            attachments.Add(customFile);
+
+
             //todo: remove alert and use an actual message popup and maybe make the "Choose the recipient" message modular?
-            if (toAddress.Equals("Choose the recipient"))
-            {
-                Response.Write("<script>alert('CHOOSE THE RECIPIENT')</script>");
-            }
-            else if (IsEmail(toAddress))
-            {
 
-                if (!emailSender.SendEmail(toAddress, subject,
-                    body, attachments))
+            foreach (ListItem address in toAddresses)
+            {
+                string toAddress = address.Value;
+
+                if (IsEmail(toAddress) && address.Selected)
                 {
-                  
-                    Response.Write("<script>alert('There was an error. Email was not sent to " + toAddress + "')</script>");
-                }
-                else
-                {
-                    //delete attachments from server
-                    foreach (var fileUpload in postedFiles)
+
+                    if (!emailSender.SendEmail(toAddress, subject,
+                        body, attachments))
                     {
-                        string attachmentPath = Path.GetFileName(fileUpload.FileName);
-                        try
-                        {
-                            //todo: this isnt working. no files are deleted
-                            File.Delete(Server.MapPath(_rootPath + _attachmentsPath + attachmentPath));
-                        }
-                        catch (Exception ex)
-                        {
 
-
-                            Console.WriteLine("Could not delete attachment on server. {0}", ex.Message);
-                        }
-
-
+                        Response.Write("<script>alert('There was an error. Email was not sent to " + toAddress + "')</script>");
                     }
-                    Response.Write("<script>alert('EMAIL HAS BEEN SENT TO " + toAddress + "')</script>");
+                    else
+                    {
+                        //delete attachments from server
+                        foreach (var fileUpload in postedFiles)
+                        {
+                            string attachmentPath = Path.GetFileName(fileUpload.FileName);
+                            try
+                            {
+                                //todo: this isnt working. no files are deleted
+                                File.Delete(Server.MapPath(_rootPath + _attachmentsPath + attachmentPath));
+                            }
+                            catch (Exception ex)
+                            {
+
+
+                                Console.WriteLine("Could not delete attachment on server. {0}", ex.Message);
+                            }
+
+
+                        }
+                        Response.Write("<script>alert('EMAIL HAS BEEN SENT TO " + toAddress + "')</script>");
+                    }
                 }
             }
-            else
-            {
-                Response.Write("<script>alert('INVALID EMAIL ADDRESS')</script>");
-            }
-
         }
 
         private ArrayList GenerateAttachments(IList<HttpPostedFile> postedFiles)
@@ -154,6 +163,14 @@ namespace WebApplication_
                 return false;
             }
         }
-        
+
+        protected void AddEmailImageButton_Click(object sender, ImageClickEventArgs imageClickEventArgs)
+        {
+            if (IsEmail(AddEmailTextBox.Text))
+            {
+                //todo:add new address
+            }
+        }
+
     }
 }
