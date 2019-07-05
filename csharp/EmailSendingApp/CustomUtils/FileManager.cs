@@ -56,14 +56,13 @@ namespace WebApplication_.CustomUtils
         public string ReadLinesFromFile(int counter, string path)
         {
             string result = "";
-            string ln = null;
             StreamReader file = new StreamReader(path);
 
-            //todo: research do while loop
+           
 
             try
-            {
-                ln = file.ReadLine();
+            { //todo: research do while loop
+                string ln = file.ReadLine();
                 while (ln != null && counter-- > 0)
                 {
                     ln = file.ReadLine();
