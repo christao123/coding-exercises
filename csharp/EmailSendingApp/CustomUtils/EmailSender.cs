@@ -1,7 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Net.Mail;
-using System.Web;
 using System.Xml;
+using MailMessage = System.Net.Mail.MailMessage;
 
 namespace WebApplication_.CustomUtils
 {
@@ -84,7 +85,8 @@ namespace WebApplication_.CustomUtils
         /// <param name="subject">the subject of the email</param>
         /// <param name="body">the main content of the email</param>
         /// <param name="attachmentPaths">an array containing the attachments' paths</param>
-        public bool SendEmail(string toAddress, string subject, string body, string[] attachmentPaths)
+        /// <param name="attachments">all the attachments of the email</param>
+        public bool SendEmail(string toAddress, string subject, string body, ArrayList attachments)
         {
             try
             {
@@ -100,10 +102,9 @@ namespace WebApplication_.CustomUtils
                 smtpServerClient.Credentials = new System.Net.NetworkCredential(Username, Password);
                 smtpServerClient.EnableSsl = EnableSsl;
 
-                foreach (var path in attachmentPaths)
+                foreach (Attachment attachment in attachments)
                 {
-                    //todo: check if attachment file path exists
-                    mail.Attachments.Add(new Attachment(path));
+                    mail.Attachments.Add(attachment);
                 }
 
                 smtpServerClient.Send(mail);
